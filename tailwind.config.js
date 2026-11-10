@@ -1,0 +1,2 @@
+module.exports = { darkMode: 'class', content: ['./src/**/*.{js,jsx}'],
+ theme: { extend: { colors: { canvas:'var(--canvas)', card:'var(--card)', popover:'var(--popover)', fg:'var(--fg)', muted:'var(--muted)', subtle:'var(--subtle)', hairline:'var(--hairline)', line:'var(--hairline-strong)', primary:'var(--primary)', yesbg:'var(--yes-bg)', yesfg:'var(--yes-fg)', nobg:'var(--no-bg)', nofg:'var(--no-fg)', up:'var(--up)' } } }, plugins: [] };

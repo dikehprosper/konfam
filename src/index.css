@@ -1,0 +1,32 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+/* TOKENS. Light values are from the site's CSS dump. Values marked TODO are provisional until the full dump (incl. .dark) is supplied. */
+:root{--canvas:#fff8eb;--card:#fff;--popover:#fffdfa;--fg:#1b1b1b;--muted:#605a66;--subtle:#867e8f;--hairline:#faf0dc;--hairline-strong:#dcd7e0;--primary:#390067;
+ --yes-bg:#efe6fb;--yes-fg:#5a1a9a;--no-bg:#fde7ee;--no-fg:#b3123f;--up:#1f9d55; /* TODO yes/no/up from dump */
+ --font-display:Georgia,'Times New Roman',serif;--font-body:system-ui,sans-serif; /* TODO real fonts */
+ --dur:.25s;--ease:cubic-bezier(.2,.8,.2,1)}
+.dark{--canvas:#0f0a18;--card:#1a1226;--popover:#1f1630;--fg:#ededed;--muted:#b5aebf;--subtle:#8d8598;--hairline:#2a2038;--hairline-strong:#3a2f4a;--primary:#7c3aed;--yes-bg:#2a1b45;--yes-fg:#c4a1ff;--no-bg:#40152a;--no-fg:#ff8aa8} /* TODO dark from dump */
+body{margin:0;background:var(--canvas);color:var(--fg);font-family:var(--font-body)}
+.display{font-family:var(--font-display)}
+.prediction-card{border-color:color-mix(in srgb,var(--hairline-strong) 60%,transparent);transition:translate .2s ease}
+.prediction-card:hover{translate:0 -3px}
+.subtopic-chip:not(.border-primary):hover{background-color:color-mix(in srgb,var(--hairline) 92%,var(--primary) 8%);color:var(--primary)}
+.hero-slide-hidden{opacity:0}
+.hero-slide-out-left{animation:heroSlideOutLeft .35s ease-in both}
+.hero-slide-out-right{animation:heroSlideOutRight .35s ease-in both}
+.hero-slide-in-left{animation:heroSlideInLeft .35s ease-out both}
+.hero-slide-in-right{animation:heroSlideInRight .35s ease-out both}
+.chart-line{stroke-dasharray:1;stroke-dashoffset:1;animation:chartLineDraw 2.4s cubic-bezier(.65,0,.35,1) forwards}
+.chart-line-delayed{animation-delay:.2s}
+.chart-hover-point{transition:cx .14s ease-out,cy .14s ease-out}
+@keyframes chartLineDraw{to{stroke-dashoffset:0}}
+@keyframes heroSlideOutLeft{to{opacity:0;transform:translateX(-100%)}}
+@keyframes heroSlideOutRight{to{opacity:0;transform:translateX(100%)}}
+@keyframes heroSlideInLeft{from{opacity:0;transform:translateX(-100%)}to{opacity:1;transform:translateX(0)}}
+@keyframes heroSlideInRight{from{opacity:0;transform:translateX(100%)}to{opacity:1;transform:translateX(0)}}
+.scrollbar-none{scrollbar-width:none;-ms-overflow-style:none}.scrollbar-none::-webkit-scrollbar{display:none}
+.skel{background:linear-gradient(90deg,var(--hairline) 25%,var(--hairline-strong) 50%,var(--hairline) 75%);background-size:200% 100%;animation:sh 1.4s infinite;border-radius:8px}
+@keyframes sh{to{background-position:-200% 0}}
+@keyframes slideDown{from{transform:translateY(-100%)}to{transform:none}}
+@keyframes riseIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.rise{animation:riseIn .5s var(--ease) both}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}

@@ -1,0 +1,15 @@
+{
+  "short_name": "Konfam",
+  "name": "Konfam",
+  "icons": [
+    {
+      "src": "konfam-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#390067",
+  "background_color": "#ffffff"
+}

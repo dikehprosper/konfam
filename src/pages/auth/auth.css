@@ -1,0 +1,363 @@
+.auth-page-outer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-page {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.auth-box {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.auth-page-header {
+  width: 100%;
+  max-width: 380px;
+}
+
+html.light .auth-page-header h6 {
+  color: #333;
+}
+
+html.dark .auth-page-header h6 {
+  color: #e5e7eb;
+}
+
+.auth-nav {
+  display: flex;
+  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 40px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 6;
+  box-sizing: border-box;
+}
+
+.auth-nav a {
+  text-decoration: none;
+  font-size: 22px;
+}
+
+html.light .auth-nav a {
+  color: #333;
+}
+
+html.dark .auth-nav a {
+  color: #e5e7eb;
+}
+
+.auth-box-outer {
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 380px;
+  overflow: hidden;
+}
+
+/* LIGHT */
+html.light .auth-box {
+  background: white;
+}
+html.light .auth-box-outer {
+  border: 1px solid #eee;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* DARK */
+html.dark .auth-box {
+  background: black;
+}
+
+html.dark .auth-box-outer {
+  border: 1px solid #1e293b;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* TITLE */
+.auth-box h2 {
+  margin-bottom: 10px;
+}
+
+html.dark .auth-box h2 {
+  color: #f1f5f9;
+}
+
+/* INPUTS */
+.auth-input {
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  flex: auto;
+}
+
+html.light .auth-input {
+  border: 1px solid #e5e7eb;
+  background: white;
+  color: #111827;
+}
+
+html.light .auth-input:hover,
+html.light .auth-input:focus {
+  border: 1px solid rgb(150, 159, 179);
+}
+
+html.dark .auth-input {
+  border: 1px solid #1e293b;
+  background: #0a0a0a;
+  color: #e5e7eb;
+}
+
+html.dark .auth-input:hover,
+html.dark .auth-input:focus {
+  border: 1px solid #314564;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  transition: background-color 9999s ease-in-out 0s;
+  -webkit-text-fill-color: #0a0a0a !important;
+  box-shadow: 0 0 0px 1000px white inset !important;
+  caret-color: #0a0a0a !important;
+}
+a html.dark input:-webkit-autofill,
+html.dark input:-webkit-autofill:hover,
+html.dark input:-webkit-autofill:focus {
+  -webkit-text-fill-color: white !important;
+  box-shadow: 0 0 0px 1000px #0a0a0a inset !important;
+  caret-color: white !important;
+}
+
+.no-select {
+  user-select: none;
+  pointer-events: none;
+}
+
+/* BUTTON */
+.auth-button {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+  margin-top: 24px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.custom-addition {
+  margin-top: 10px;
+}
+
+.auth-button:hover {
+  opacity: 0.9;
+}
+
+html.light .auth-button {
+  background: #111827;
+}
+
+html.dark .auth-button {
+  /* background: #1a3e8d; */
+  background: #111827;
+  border: 1px solid #1e293b;
+}
+
+html.dark .auth-button:hover {
+  background: rgb(26, 36, 58);
+}
+
+/* SWITCH TEXT */
+.auth-switch {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.auth-switch-container {
+  background: #111827;
+  padding: 7px 0px;
+}
+
+html.light .auth-switch {
+  color: #8c9097;
+}
+
+html.dark .auth-switch {
+  color: #8c9097d5;
+}
+
+.auth-switch a {
+  color: white;
+  text-decoration: none;
+}
+
+.auth-switch a:hover,
+html.dark .auth-switch a:hover {
+  opacity: 0.8;
+}
+
+/* DASHBOARD */
+.dashboard {
+  padding: 80px 40px;
+}
+
+html.dark .dashboard {
+  color: #e5e7eb;
+}
+
+.gmail-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0;
+  border: 1px solid #1e293b;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #444;
+  cursor: pointer;
+  margin-bottom: 10px;
+  background: transparent;
+  position: relative;
+}
+
+.gmail-button:hover {
+  background: rgba(128, 128, 128, 0.056);
+}
+
+html.dark .gmail-button:hover {
+  background: #111827aa;
+}
+
+.auth-button-dashes {
+  display: flex;
+  flex: 1;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.auth-button-dashes-span {
+  margin: 0 16px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+html.dark .auth-button-dashes {
+  /* background: #e0e0e02c; */
+  background: #1e293b;
+}
+
+html.dark .auth-button-dashes-span {
+  color: rgba(255, 255, 255, 0.799);
+}
+
+html.dark .gmail-button {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.799);
+}
+
+.password-input-label {
+  font-size: 13px;
+  font-weight: 600;
+  position: absolute;
+  right: 10px;
+  top: 1px;
+  color: #5274bc;
+  cursor: pointer;
+}
+
+.password-forgot-password {
+  font-size: 12px;
+  font-weight: 400;
+  position: absolute;
+  right: 5px;
+  top: 46px;
+  color: #333;
+  font-style: italic;
+}
+
+html.dark .password-forgot-password {
+  color: #e0dcdc;
+}
+
+.password-forgot-password:hover,
+html.dark .password-forgot-password:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .auth-nav {
+    height: 60px;
+    padding: 0px 15px;
+  }
+  .auth-page {
+    padding: 0px 15px;
+  }
+
+  .auth-nav a {
+    font-size: 14px;
+  }
+}
+
+.error-text {
+  color: #ef4444;
+  font-size: 12px;
+  margin-bottom: 0px;
+  position: absolute;
+  font-weight: 300;
+  top: 30px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  justify-content: "flex-start";
+}
+
+.custom-error-text {
+  justify-content: flex-start;
+  margin-left: 3px;
+}
+
+.custom-error-text-google {
+  top: 33px;
+}
+
+.success-text {
+  color: #22c55e;
+  font-size: 14px;
+  margin-bottom: 0px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin-left: 33px;
+  margin-bottom: 17px;
+  text-align: center;
+}
